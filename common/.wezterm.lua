@@ -48,18 +48,18 @@ local colors = {
 -- Key bindings
 local keys = {
   -- Pane navigation
-  { key = 'h', mods = 'OPT', action = act.ActivatePaneDirection 'Left' },
-  { key = 'l', mods = 'OPT', action = act.ActivatePaneDirection 'Right' },
-  { key = 'j', mods = 'OPT', action = act.ActivatePaneDirection 'Down' },
-  { key = 'k', mods = 'OPT', action = act.ActivatePaneDirection 'Up' },
+  { key = 'h',          mods = 'OPT',       action = act.ActivatePaneDirection 'Left' },
+  { key = 'l',          mods = 'OPT',       action = act.ActivatePaneDirection 'Right' },
+  { key = 'j',          mods = 'OPT',       action = act.ActivatePaneDirection 'Down' },
+  { key = 'k',          mods = 'OPT',       action = act.ActivatePaneDirection 'Up' },
 
   -- Tab management
-  { key = "LeftArrow", mods = "CMD|SHIFT", action = act.MoveTabRelative(-1) },
+  { key = "LeftArrow",  mods = "CMD|SHIFT", action = act.MoveTabRelative(-1) },
   { key = "RightArrow", mods = "CMD|SHIFT", action = act.MoveTabRelative(1) },
 
   -- Utility functions
-  { key = 'r', mods = 'CMD|SHIFT', action = act.ReloadConfiguration },
-  { key = 'f', mods = 'CMD|SHIFT', action = act.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES' } },
+  { key = 'r',          mods = 'CMD|SHIFT', action = act.ReloadConfiguration },
+  { key = 'f',          mods = 'CMD|SHIFT', action = act.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES' } },
 
   -- Workspace management
   {
@@ -86,6 +86,9 @@ local keys = {
 
 -- Main configuration
 return {
+  -- Sound
+  audible_bell = 'Disabled',
+
   -- Appearance
   window_decorations = "RESIZE",
   color_scheme = colors.scheme,
