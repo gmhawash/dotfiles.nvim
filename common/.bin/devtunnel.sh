@@ -67,7 +67,7 @@ PROJECT=""
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
-        start|stop|list)
+        start|stop|restart|list)
             CMD="$1"
             shift
             ;;
@@ -100,11 +100,15 @@ case "$CMD" in
     stop)
         stop_forwarding "$PROJECT"
         ;;
+    restart)
+        stop_forwarding "$PROJECT"
+        start_forwarding "$PROJECT" "$SERVER"
+        ;;
     list)
         ls -1 "$CONFIG_DIR" | grep -v "\.pids$"
         ;;
     *)
-        echo "Usage: $0 start|stop|list <project-name> [-s|--server <server-address>]"
+        echo "Usage: $0 start|stop|restart|list <project-name> [-s|--server <server-address>]"
         exit 1
         ;;
 esac
