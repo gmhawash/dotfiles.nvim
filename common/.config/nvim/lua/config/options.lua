@@ -94,3 +94,7 @@ vim.opt.guicursor = {
   "n-v-c:block", -- Block in normal mode
   "i:ver25",     -- Vertical line in insert mode
 }
+
+-- Set default border style for all floating windows (e.g. LSP hover, signature help)
+-- Does NOT affect plugin popups like nvim-cmp or Telescope
+vim.o.winborder = 'rounded'

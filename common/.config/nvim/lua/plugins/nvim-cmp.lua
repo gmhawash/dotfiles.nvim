@@ -50,6 +50,15 @@ return {
         { name = "path" },
         { name = "calc" },
       }),
+
+      window = {
+        completion = cmp.config.window.bordered({
+          border = 'rounded',
+        }),
+        documentation = cmp.config.window.bordered({
+          border = 'rounded',
+        }),
+      },
     })
   end,
 }
