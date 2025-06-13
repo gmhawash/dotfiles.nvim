@@ -13,11 +13,5 @@ return {
         vim.cmd("setlocal number")
       end,
     })
-
-    -- Start in insert mode whenever switching to a terminal buffer.
-    vim.api.nvim_create_autocmd("BufEnter", {
-      pattern = "term://*",
-      command = "startinsert",
-    })
   end,
 }
