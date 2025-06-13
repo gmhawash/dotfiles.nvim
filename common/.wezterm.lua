@@ -4,7 +4,7 @@ local act = wezterm.action
 -- Load local config with fallbacks
 local function load_local_config()
   local default_config = {
-    font_size = 12.8,
+    font_size = 12.1,
   }
 
   local ok, config = pcall(function()
@@ -92,8 +92,8 @@ return {
   window_decorations = "RESIZE",
   color_scheme = 'Dracula',
   colors = colors,
-  font = wezterm.font("SFMono Nerd Font", {
-    weight = "DemiBold",
+  font = wezterm.font("Fira Code", {
+    weight = "Regular",
     stretch = "Normal",
     style = "Normal"
   }),
