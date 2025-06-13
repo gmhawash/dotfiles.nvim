@@ -47,18 +47,18 @@ local colors = {
 -- Key bindings
 local keys = {
   -- Pane navigation
-  { key = 'h', mods = 'CMD', action = act.ActivatePaneDirection 'Left' },
-  { key = 'l', mods = 'CMD', action = act.ActivatePaneDirection 'Right' },
-  { key = 'j', mods = 'CMD', action = act.ActivatePaneDirection 'Down' },
-  { key = 'k', mods = 'CMD', action = act.ActivatePaneDirection 'Up' },
+  { key = 'h',          mods = 'CMD',       action = act.ActivatePaneDirection 'Left' },
+  { key = 'l',          mods = 'CMD',       action = act.ActivatePaneDirection 'Right' },
+  { key = 'j',          mods = 'CMD',       action = act.ActivatePaneDirection 'Down' },
+  { key = 'k',          mods = 'CMD',       action = act.ActivatePaneDirection 'Up' },
 
   -- Tab management
-  { key = "LeftArrow", mods = "CMD|SHIFT", action = act.MoveTabRelative(-1) },
+  { key = "LeftArrow",  mods = "CMD|SHIFT", action = act.MoveTabRelative(-1) },
   { key = "RightArrow", mods = "CMD|SHIFT", action = act.MoveTabRelative(1) },
 
   -- Utility functions
-  { key = 'r', mods = 'CMD|SHIFT', action = act.ReloadConfiguration },
-  { key = 'f', mods = 'CMD|SHIFT', action = act.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES' } },
+  { key = 'r',          mods = 'CMD|SHIFT', action = act.ReloadConfiguration },
+  { key = 'f',          mods = 'CMD|SHIFT', action = act.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES' } },
 
   -- Workspace management
   {
@@ -81,6 +81,10 @@ local keys = {
       )
     end),
   },
+
+  -- Pane splitting
+  { key = 'd', mods = 'CMD|SHIFT', action = act.SplitHorizontal { domain = "CurrentPaneDomain" } },
+  { key = 's', mods = 'CMD|SHIFT', action = act.SplitVertical { domain = "CurrentPaneDomain" } },
 }
 
 -- Main configuration
@@ -93,7 +97,7 @@ return {
   color_scheme = 'Dracula',
   colors = colors,
   font = wezterm.font("Fira Code", {
-    weight = "Regular",
+    weight = 450,
     stretch = "Normal",
     style = "Normal"
   }),
