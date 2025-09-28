@@ -12,7 +12,7 @@ return {
 
     telescope.setup({
       defaults = {
-        border = false,
+        border = true,
         path_display = { "smart" },
         mappings = {
           i = {
