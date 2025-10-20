@@ -1,5 +1,5 @@
 -- Set the leader key to space
-vim.g.mapleader = ' '
+vim.g.mapleader = '\\'
 vim.g.maplocalleader = "\\"
 
 -- Clear search highlighting
@@ -23,3 +23,6 @@ vim.keymap.set('t', '<C-o>', '<C-\\><C-n>')
 
 -- Make all windows equal size
 vim.keymap.set('n', '<leader>rw', '<C-W>=')
+
+-- Ag search
+vim.cmd("map <Leader>a :Ag -i<SPACE>")
