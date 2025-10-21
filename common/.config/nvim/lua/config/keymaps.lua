@@ -15,6 +15,9 @@ vim.keymap.set('n', '<C-K>', '<C-W><C-K>')
 vim.keymap.set('n', '<C-L>', '<C-W><C-L>')
 vim.keymap.set('n', '<C-H>', '<C-W><C-H>')
 
+--- Switch between last two buffers
+vim.keymap.set('n', '<leader><leader>', '<C-^>')
+
 -- Use this for navigation in terminal mode
 vim.keymap.set('t', '<C-k>', [[<C-\><C-n><C-W>k]])
 

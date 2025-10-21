@@ -6,5 +6,6 @@ return {
     gitsigns.setup({current_line_blame = true})
 
     vim.keymap.set('n', '<leader>gs', ':Gitsigns toggle_signs<CR>')
+    vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#aaaa00" })
   end,
 }
