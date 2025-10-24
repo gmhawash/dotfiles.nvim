@@ -30,3 +30,5 @@ vim.keymap.set('n', '<leader>rw', '<C-W>=')
 -- Ag search
 vim.cmd("map <Leader>a :Ag -i<SPACE>")
 
+vim.keymap.set('n', 'K',":Ag '<C-R><C-W>'<CR>")
+
