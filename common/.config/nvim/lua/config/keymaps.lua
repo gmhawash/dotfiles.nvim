@@ -31,4 +31,5 @@ vim.keymap.set('n', '<leader>rw', '<C-W>=')
 vim.cmd("map <Leader>a :Ag -i<SPACE>")
 
 vim.keymap.set('n', 'K',":Ag '<C-R><C-W>'<CR>")
+vim.cmd("cnoremap %% <C-R>=expand('%:h').'/'<cr>")
 
