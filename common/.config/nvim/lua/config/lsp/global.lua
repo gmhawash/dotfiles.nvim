@@ -43,14 +43,6 @@ local function set_global_keymaps(client, bufnr)
     bufnr = bufnr,
   })
 
-  -- Show hover information
-  utils.set_keymap({
-    key = 'K',
-    cmd = vim.lsp.buf.hover,
-    desc = "Show hover information",
-    bufnr = bufnr,
-  })
-
   -- Go to implementation
   utils.set_keymap({
     key = 'gi',
