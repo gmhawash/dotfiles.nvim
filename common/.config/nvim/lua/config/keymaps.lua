@@ -33,3 +33,11 @@ vim.cmd("map <Leader>a :Ag -i<SPACE>")
 vim.keymap.set('n', 'K',":Ag '<C-R><C-W>'<CR>")
 vim.cmd("cnoremap %% <C-R>=expand('%:h').'/'<cr>")
 
+
+--- NvimTree
+vim.keymap.set("n", "<C-e>", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
+vim.keymap.set('n', '<Leader>ee', ':NvimTreeFindFile!<CR>')
+
+
+--- Format buffer 
+vim.keymap.set('n', '<leader>fef', 'gg=G')

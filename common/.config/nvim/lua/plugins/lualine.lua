@@ -13,8 +13,12 @@ return {
         component_separators = { '', '' },
       },
       sections = {
+        lualine_b = {},
         lualine_x = { 'fileformat', 'filetype' },
       },
+      tabline = {
+        lualine_b = {'branch'}
+      }
     }
   end,
 }
